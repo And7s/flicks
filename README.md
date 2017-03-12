@@ -38,7 +38,7 @@ none
 
 Here's a walkthrough of implemented user stories:
 
-![screenacap of the app](http://i.imgur.com/DIWyhms.gif)
+![screenacap of the app](http://i.imgur.com/vJxeEiw.gif)
 
 longer screencap: http://i.imgur.com/agZHSKd.gif
 ## Notes
