@@ -12,21 +12,15 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-        <fragment
-            android:id="@+id/youtubeFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment">
-        </fragment>
-
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
         <ImageView
             android:layout_width="match_parent"
             android:scaleType="centerCrop"
             android:layout_height="400dp"
             android:id="@+id/ivDetailPoster" />
-
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

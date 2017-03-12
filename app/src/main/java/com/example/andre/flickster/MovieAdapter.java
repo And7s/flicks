@@ -10,8 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 /**
  * Created by Andre on 08/03/2017.
@@ -86,7 +89,11 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
             }
             Movie m = movies.get(position);
             String imagePath = "https://image.tmdb.org/t/p/w780/" + m.backdrop_path;
-            Picasso.with(getContext()).load(imagePath).placeholder(R.drawable.placeholder).into(vh.ivPopularPoster);
+            final int radius = 20;
+            final int margin = 10;
+            final Transformation transformation = new RoundedCornersTransformation(radius, margin);
+
+            Picasso.with(getContext()).load(imagePath).placeholder(R.drawable.placeholder).transform(transformation).into(vh.ivPopularPoster);
         }
         return convertView;
     }
